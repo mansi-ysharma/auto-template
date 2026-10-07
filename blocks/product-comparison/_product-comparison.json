@@ -1,0 +1,96 @@
+{
+  "definitions": [
+    {
+      "title": "Product Comparison",
+      "id": "product-comparison",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product Comparison",
+              "filter": "product-comparison"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Compare Product",
+      "id": "compare-product",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Compare Product",
+              "model": "compare-product"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-comparison",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "heading",
+          "label": "Heading",
+          "value": ""
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "maxCompare",
+          "label": "Max products to compare",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "compare-product",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "name",
+          "label": "Name",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "price",
+          "label": "Price",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "specs",
+          "label": "Specs (one per line, \"Label: Value\")",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "product-comparison",
+      "components": [
+        "compare-product"
+      ]
+    }
+  ]
+}

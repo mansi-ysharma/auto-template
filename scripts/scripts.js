@@ -74,31 +74,29 @@ function buildAutoBlocks() {
  * Decorates formatted links to style them as buttons.
  * @param {HTMLElement} main The main container element
  */
+/**
+ * Turns authored links into buttons. A link becomes a button when it is wrapped
+ * in `<strong>` (primary), `<em>` (secondary) or both (accent). Unlike the stock
+ * boilerplate this also supports several CTAs in a single paragraph (the common
+ * "Book Now / Test Drive" pattern) — the paragraph becomes a `.button-wrapper`
+ * holding multiple buttons, as long as it contains nothing but those links.
+ * @param {HTMLElement} main The main container element
+ */
 export function decorateButtons(main) {
-  main.querySelectorAll('p a[href]').forEach((a) => {
+  const buttonize = (a) => {
     a.title = a.title || a.textContent;
-    const p = a.closest('p');
+    if (a.querySelector('img')) return false;
     const text = a.textContent.trim();
-
-    // quick structural checks
-    if (a.querySelector('img') || p.textContent.trim() !== text) return;
-
-    // skip URL display links
     try {
-      if (new URL(a.href).href === new URL(text, window.location).href) return;
+      if (new URL(a.href).href === new URL(text, window.location).href) return false;
     } catch { /* continue */ }
-
-    // require authored formatting for buttonization
     const strong = a.closest('strong');
     const em = a.closest('em');
-    if (!strong && !em) return;
-
-    p.className = 'button-wrapper';
+    if (!strong && !em) return false;
     a.className = 'button';
-    if (strong && em) { // high-impact call-to-action
+    if (strong && em) {
       a.classList.add('accent');
-      const outer = strong.contains(em) ? strong : em;
-      outer.replaceWith(a);
+      (strong.contains(em) ? strong : em).replaceWith(a);
     } else if (strong) {
       a.classList.add('primary');
       strong.replaceWith(a);
@@ -106,6 +104,24 @@ export function decorateButtons(main) {
       a.classList.add('secondary');
       em.replaceWith(a);
     }
+    return true;
+  };
+
+  main.querySelectorAll('p').forEach((p) => {
+    const anchors = [...p.querySelectorAll('a[href]')];
+    if (!anchors.length) return;
+
+    // the paragraph must contain only the link(s) — no other visible text
+    const clone = p.cloneNode(true);
+    clone.querySelectorAll('a[href]').forEach((a) => a.remove());
+    if (clone.textContent.trim() !== '') return;
+
+    // require every link to be authored as a button (strong/em); otherwise leave it
+    if (!anchors.every((a) => a.closest('strong') || a.closest('em'))) return;
+
+    let count = 0;
+    anchors.forEach((a) => { if (buttonize(a)) count += 1; });
+    if (count) p.className = 'button-wrapper';
   });
 }
 

@@ -1,6 +1,8 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 6px rgb(0 0 0 / 6%);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -15,10 +17,11 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  max-width: 1440px;
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
+  color: var(--color-ink);
 }
 
 header nav[aria-expanded='true'] {
@@ -149,8 +152,9 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 88px;
   height: auto;
+  display: block;
 }
 
 /* sections */
@@ -174,7 +178,11 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -231,6 +239,9 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -238,35 +249,99 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-    display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
-  }
-
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     content: '';
     position: absolute;
     top: -8px;
-    left: 16px;
+    left: 24px;
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid var(--color-white);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+    padding: 8px 20px;
+    font-family: var(--body-font-family);
+    font-weight: 400;
+    text-transform: none;
+    font-size: 15px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:hover,
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] {
+    color: var(--color-primary-red);
+    border-bottom-color: var(--color-primary-red);
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    display: block;
+    position: absolute;
+    left: -16px;
+    width: 230px;
+    top: 200%;
     padding: 8px 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+    white-space: initial;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li:hover {
+    color: var(--color-primary-red);
+    background: var(--color-surface-alt);
   }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ============================================================
+   MG Motor header theme
+   ============================================================ */
+
+/* brand logo */
+header nav .nav-brand {
+  flex-basis: auto;
+}
+
+header nav .nav-brand .icon-mg-logo {
+  width: auto;
+  height: auto;
+}
+
+/* tools: the two CTA buttons */
+header nav .nav-tools p {
+  margin: 0;
+}
+
+header nav .nav-tools a.button {
+  padding: 0.6em 1.1em;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+header nav .nav-tools a.button.secondary {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+header nav .nav-tools a.button.secondary:hover {
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+  background: transparent;
+}
+
+@media (width < 900px) {
+  header nav .nav-tools a.button {
+    font-size: 12px;
+    padding: 0.5em 0.8em;
+  }
 }

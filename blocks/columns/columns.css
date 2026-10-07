@@ -31,3 +31,36 @@
     order: unset;
   }
 }
+
+/* Feature variant — large image beside descriptive copy, MG style */
+.columns.feature > div {
+  gap: 32px;
+  align-items: center;
+}
+
+.columns.feature > div img {
+  border-radius: var(--card-radius);
+  display: block;
+}
+
+.columns.feature h3 {
+  font-size: var(--heading-font-size-l);
+  margin-top: 0;
+}
+
+.columns.feature p {
+  color: var(--color-muted);
+  font-size: var(--body-font-size-s);
+}
+
+@media (width >= 900px) {
+  .columns.feature > div {
+    gap: 56px;
+  }
+
+  /* reverse: image on the right */
+  .columns.feature.reverse .columns-img-col {
+    order: 2;
+  }
+}
+

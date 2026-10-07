@@ -1,0 +1,93 @@
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion .accordion-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion .accordion-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.125rem 0.25rem;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xs);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.accordion .accordion-item-title::-webkit-details-marker {
+  display: none;
+}
+
+.accordion .accordion-item-title::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.accordion .accordion-item-title:hover {
+  color: var(--color-primary-red);
+}
+
+.accordion .accordion-item-title:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+.accordion .accordion-item[open] .accordion-item-title {
+  color: var(--color-primary-red);
+}
+
+.accordion .accordion-item[open] .accordion-item-title::after {
+  transform: rotate(-135deg);
+}
+
+.accordion .accordion-item-body {
+  padding: 0 0.25rem 1.25rem;
+  color: var(--color-ink);
+}
+
+/* specifications variant: key/value rows */
+.accordion.specifications .accordion-item-body,
+.accordion.single .accordion-item-body {
+  display: grid;
+  gap: 0;
+}
+
+.accordion.specifications .accordion-item-body p,
+.accordion.single .accordion-item-body p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion.specifications .accordion-item-body p:nth-child(odd),
+.accordion.single .accordion-item-body p:nth-child(odd) {
+  background-color: var(--color-surface-alt);
+}
+
+.accordion.specifications .accordion-item-body p strong,
+.accordion.single .accordion-item-body p strong {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+@media (width >= 900px) {
+  .accordion .accordion-item-title {
+    font-size: var(--heading-font-size-s);
+  }
+}

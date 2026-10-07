@@ -1,0 +1,77 @@
+.filter .filter-title {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: var(--color-ink-soft);
+}
+
+.filter .filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter .filter-group {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+}
+
+.filter .filter-group-label {
+  padding: 0 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+.filter .filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.filter .filter-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary-red);
+}
+
+.filter .filter-clear {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--button-radius);
+  background: var(--color-white);
+  color: var(--color-ink);
+  cursor: pointer;
+  font: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter .filter-clear:hover {
+  background: var(--color-surface-alt);
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+}
+
+.filter .filter-clear:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+@media (width >= 900px) {
+  .filter .filter-form {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  .filter .filter-group {
+    flex: 1 1 200px;
+  }
+
+  .filter .filter-clear {
+    align-self: center;
+  }
+}

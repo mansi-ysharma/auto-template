@@ -1,0 +1,62 @@
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.scroll-down .scroll-down-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  font: inherit;
+  transition: color 0.2s ease;
+}
+
+.scroll-down .scroll-down-button:hover {
+  color: var(--color-primary-red);
+}
+
+.scroll-down .scroll-down-label {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.scroll-down .scroll-down-chevron {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  animation: scroll-down-bounce 1.6s ease-in-out infinite;
+}
+
+.scroll-down .scroll-down-button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 4px;
+}
+
+@keyframes scroll-down-bounce {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-down .scroll-down-chevron {
+    animation: none;
+  }
+}

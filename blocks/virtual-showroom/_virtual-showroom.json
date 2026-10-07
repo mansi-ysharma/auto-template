@@ -1,0 +1,68 @@
+{
+  "definitions": [
+    {
+      "title": "Virtual Showroom",
+      "id": "virtual-showroom",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Virtual Showroom",
+              "filter": "virtual-showroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Showroom Frame",
+      "id": "showroom-frame",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Showroom Frame",
+              "model": "showroom-frame"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "virtual-showroom",
+      "fields": [
+        {
+          "component": "text",
+          "name": "heading",
+          "label": "Heading",
+          "valueType": "string",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "showroom-frame",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Frame Image",
+          "valueType": "string",
+          "multi": false
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "virtual-showroom",
+      "components": [
+        "showroom-frame"
+      ]
+    }
+  ]
+}

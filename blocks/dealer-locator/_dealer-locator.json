@@ -1,0 +1,91 @@
+{
+  "definitions": [
+    {
+      "title": "Dealer Locator",
+      "id": "dealer-locator",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Dealer Locator",
+              "filter": "dealer-locator"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Dealer",
+      "id": "dealer",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Dealer",
+              "model": "dealer"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "dealer-locator",
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "number",
+          "name": "pageSize",
+          "label": "Page Size",
+          "valueType": "number",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": "dealer",
+      "fields": [
+        {
+          "component": "text",
+          "name": "name",
+          "label": "Name",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "state",
+          "label": "State",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "city",
+          "label": "City",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "address",
+          "label": "Address (include phone & link here)",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "dealer-locator",
+      "components": [
+        "dealer"
+      ]
+    }
+  ]
+}

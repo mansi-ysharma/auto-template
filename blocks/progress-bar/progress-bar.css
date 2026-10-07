@@ -1,0 +1,107 @@
+.progress-bar .progress-bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  counter-reset: step;
+}
+
+.progress-bar .progress-bar-step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding-top: 44px;
+  min-width: 0;
+}
+
+/* connective line */
+.progress-bar .progress-bar-step::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.progress-bar .progress-bar-step:first-child::before {
+  display: none;
+}
+
+.progress-bar .progress-bar-step.is-completed::before,
+.progress-bar .progress-bar-step.is-current::before {
+  background: var(--color-primary-red);
+}
+
+.progress-bar .progress-bar-marker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.progress-bar .progress-bar-step.is-completed .progress-bar-marker {
+  background: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  color: var(--color-white);
+}
+
+.progress-bar .progress-bar-step.is-current .progress-bar-marker {
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+  box-shadow: 0 0 0 4px var(--color-red-50);
+}
+
+.progress-bar .progress-bar-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  padding: 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-bar .progress-bar-step.is-current .progress-bar-label {
+  color: var(--color-primary-red);
+  font-weight: 600;
+}
+
+/* screen-reader-only status prefix */
+.progress-bar .progress-bar-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (width >= 600px) {
+  .progress-bar .progress-bar-label {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}
+
+@media (width >= 900px) {
+  .progress-bar .progress-bar-label {
+    font-size: 0.95rem;
+  }
+}

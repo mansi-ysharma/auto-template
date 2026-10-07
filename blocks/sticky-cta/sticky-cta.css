@@ -1,0 +1,106 @@
+.sticky-cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  box-shadow: 0 -2px 12px rgb(0 0 0 / 10%);
+  transform: translateY(120%);
+  transition: transform 0.35s ease;
+}
+
+.sticky-cta.sticky-cta-visible:not(.sticky-cta-dismissed) {
+  transform: translateY(0);
+}
+
+.sticky-cta.sticky-cta-dismissed {
+  transform: translateY(120%);
+}
+
+.sticky-cta .sticky-cta-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sticky-cta .sticky-cta-content > * {
+  margin: 0;
+}
+
+.sticky-cta .sticky-cta-content a.button {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  background-color: var(--color-primary-red);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary-red);
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.sticky-cta .sticky-cta-content a.button:hover {
+  background-color: var(--color-red-hover);
+  border-color: var(--color-red-hover);
+}
+
+.sticky-cta .sticky-cta-content a.button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+/* secondary CTA (any beyond the first) rendered as outline */
+.sticky-cta .sticky-cta-content a.button:not(:first-of-type) {
+  background-color: transparent;
+  border-color: rgb(255 255 255 / 60%);
+  color: var(--color-white);
+}
+
+.sticky-cta .sticky-cta-content a.button:not(:first-of-type):hover {
+  background-color: rgb(255 255 255 / 15%);
+  border-color: var(--color-white);
+}
+
+.sticky-cta .sticky-cta-dismiss {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 15%);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sticky-cta .sticky-cta-dismiss:hover {
+  background-color: rgb(255 255 255 / 30%);
+}
+
+.sticky-cta .sticky-cta-dismiss:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+@media (width >= 900px) {
+  .sticky-cta {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: auto;
+    max-width: 520px;
+    border-radius: 999px;
+    padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  }
+}
