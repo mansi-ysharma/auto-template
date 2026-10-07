@@ -8,20 +8,66 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
   background-color: var(--background-color);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cards > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 12%);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 20px;
+}
+
+.cards .cards-card-body h3 {
+  margin: 0 0 6px;
+  font-size: var(--heading-font-size-s);
+}
+
+.cards .cards-card-body p {
+  margin: 0 0 6px;
+  color: var(--color-muted);
+  font-size: var(--body-font-size-xs);
+}
+
+.cards .cards-card-body .button-wrapper {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cards .cards-card-body .button-wrapper .button {
+  font-size: 13px;
+  padding: 0.55em 1.1em;
 }
 
 .cards .cards-card-image {
   line-height: 0;
+  background: var(--color-surface-alt);
 }
 
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* Quicklinks variant — text-only tiles on a light surface */
+.cards.quicklinks > ul {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.cards.quicklinks > ul > li {
+  background: var(--color-surface-alt);
+  border-color: transparent;
+}
+
+.cards.quicklinks .cards-card-body h3 {
+  font-size: var(--heading-font-size-xs);
 }

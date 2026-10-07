@@ -1,0 +1,18 @@
+# Enforce LF line endings for all text files so ESLint (linebreak-style: unix)
+# and Stylelint pass consistently on Windows checkouts (core.autocrlf safe).
+* text=auto eol=lf
+
+# Binary assets: never normalise
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.docx binary
+*.xlsx binary
+*.pdf binary

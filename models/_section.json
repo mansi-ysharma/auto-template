@@ -50,7 +50,31 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "carousel",
+        "tabs",
+        "accordion",
+        "breadcrumb",
+        "banner",
+        "sticky-cta",
+        "scroll-down",
+        "cookie-consent",
+        "form",
+        "search",
+        "map",
+        "dealer-locator",
+        "filter",
+        "view-selector",
+        "pagination",
+        "variant-selector",
+        "product-comparison",
+        "emi-calculator",
+        "timeline",
+        "virtual-showroom",
+        "chatbot",
+        "download",
+        "progress-bar",
+        "menu"
       ]
     }
   ]

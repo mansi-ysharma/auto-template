@@ -1,0 +1,110 @@
+{
+  "definitions": [
+    {
+      "title": "Map",
+      "id": "map",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Map",
+              "filter": "map"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Map Marker",
+      "id": "map-marker",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Map Marker",
+              "model": "map-marker"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "map",
+      "fields": [
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Style",
+          "valueType": "string",
+          "value": "default",
+          "options": [
+            { "name": "Default", "value": "default" },
+            { "name": "Route", "value": "route" }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "apiKey",
+          "label": "Google Maps API Key",
+          "valueType": "string",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "center",
+          "label": "Center (latitude, longitude)",
+          "valueType": "string",
+          "value": ""
+        },
+        {
+          "component": "number",
+          "name": "zoom",
+          "label": "Zoom",
+          "valueType": "number",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "id": "map-marker",
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "number",
+          "name": "latitude",
+          "label": "Latitude",
+          "valueType": "number"
+        },
+        {
+          "component": "number",
+          "name": "longitude",
+          "label": "Longitude",
+          "valueType": "number"
+        },
+        {
+          "component": "richtext",
+          "name": "address",
+          "label": "Address",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "map",
+      "components": [
+        "map-marker"
+      ]
+    }
+  ]
+}

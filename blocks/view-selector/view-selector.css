@@ -1,0 +1,39 @@
+.view-selector .view-selector-group {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.view-selector .view-selector-btn {
+  padding: 8px 16px;
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-ink);
+  cursor: pointer;
+  font: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-selector .view-selector-btn:last-child {
+  border-right: 0;
+}
+
+.view-selector .view-selector-btn:hover {
+  background: var(--color-surface-alt);
+}
+
+.view-selector .view-selector-btn:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: -2px;
+}
+
+.view-selector .view-selector-btn[aria-pressed='true'] {
+  background: var(--color-primary-red);
+  color: var(--color-white);
+}
+
+.view-selector .view-selector-btn[aria-pressed='true']:hover {
+  background: var(--color-red-hover);
+}

@@ -1,0 +1,87 @@
+.map .map-canvas {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  min-height: 200px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--color-surface-alt);
+}
+
+.map .map-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.map .map-placeholder-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.map .map-route-hint {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--color-red-50);
+  color: var(--color-primary-red);
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.map .map-marker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.map .map-marker {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map .map-marker:hover {
+  border-color: var(--color-primary-red);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+}
+
+.map .map-marker-title {
+  display: block;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.map .map-marker-address {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.map .map-marker-address p {
+  margin: 0;
+}
+
+.map .map-empty {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+@media (width >= 900px) {
+  .map .map-marker-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

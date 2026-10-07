@@ -142,6 +142,116 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Specifications",
+            "value": "specifications"
+          },
+          {
+            "name": "Single Open",
+            "value": "single"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Dark overlay",
+            "value": "dark"
+          },
+          {
+            "name": "Flyout panel",
+            "value": "flyout"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "home",
+        "label": "Home Label",
+        "value": "Home"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "homeLink",
+        "label": "Home Link",
+        "value": "/"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -161,6 +271,109 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Variant",
+        "valueType": "string",
+        "value": "banner",
+        "options": [
+          {
+            "name": "Banner (full-bleed, autoplay)",
+            "value": "banner"
+          },
+          {
+            "name": "Product",
+            "value": "product"
+          },
+          {
+            "name": "Cards",
+            "value": "cards"
+          },
+          {
+            "name": "Gallery (with thumbnails)",
+            "value": "gallery"
+          },
+          {
+            "name": "Model Variant",
+            "value": "model"
+          },
+          {
+            "name": "Variant",
+            "value": "variant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link (makes slide clickable)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "chatbot",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "value": "Chat with us"
+      },
+      {
+        "component": "richtext",
+        "name": "welcome",
+        "label": "Welcome Message",
+        "valueType": "string",
+        "value": "Hi! How can we help you today?"
+      },
+      {
+        "component": "text",
+        "name": "providerScript",
+        "label": "Provider Script URL",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "widgetId",
+        "label": "Widget ID",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -176,6 +389,347 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "cookie-consent",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "message",
+        "value": "",
+        "label": "Message",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "acceptLabel",
+        "label": "Accept Button Label",
+        "valueType": "string",
+        "value": "Accept"
+      },
+      {
+        "component": "text",
+        "name": "declineLabel",
+        "label": "Decline Button Label",
+        "valueType": "string",
+        "value": "Decline"
+      }
+    ]
+  },
+  {
+    "id": "dealer-locator",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "pageSize",
+        "label": "Page Size",
+        "valueType": "number",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "dealer",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Name",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "state",
+        "label": "State",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "city",
+        "label": "City",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "address",
+        "label": "Address (include phone & link here)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "download",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "boolean",
+        "name": "selectable",
+        "label": "Selectable (checkboxes + download selected)",
+        "valueType": "boolean",
+        "value": true
+      }
+    ]
+  },
+  {
+    "id": "download-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "file",
+        "label": "File",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "fileType",
+        "label": "File Type",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "fileSize",
+        "label": "File Size",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "emi-calculator",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "price",
+        "label": "Vehicle Price",
+        "value": 1000000
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "downPayment",
+        "label": "Down Payment",
+        "value": 100000
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "interestRate",
+        "label": "Interest Rate (% p.a.)",
+        "value": 9
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "tenureMonths",
+        "label": "Tenure (months)",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "id": "filter",
+    "fields": [
+      {
+        "component": "text",
+        "name": "target",
+        "label": "Target Selector",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "value": "Filter"
+      }
+    ]
+  },
+  {
+    "id": "filter-group",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "key",
+        "label": "Data Key",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "options",
+        "label": "Options (comma-separated)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Contact",
+            "value": "contact"
+          },
+          {
+            "name": "Test Drive",
+            "value": "test-drive"
+          },
+          {
+            "name": "Booking",
+            "value": "booking"
+          },
+          {
+            "name": "Inline",
+            "value": "inline"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "action",
+        "label": "Action (submit endpoint URL)",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "successMessage",
+        "label": "Success Message",
+        "valueType": "string",
+        "value": "Thank you."
+      },
+      {
+        "component": "text",
+        "name": "submitLabel",
+        "label": "Submit Button Label",
+        "valueType": "string",
+        "value": "Submit"
+      }
+    ]
+  },
+  {
+    "id": "form-field",
+    "fields": [
+      {
+        "component": "select",
+        "name": "kind",
+        "label": "Field Type",
+        "valueType": "string",
+        "value": "text",
+        "options": [
+          {
+            "name": "Text",
+            "value": "text"
+          },
+          {
+            "name": "Email",
+            "value": "email"
+          },
+          {
+            "name": "Telephone",
+            "value": "tel"
+          },
+          {
+            "name": "Number",
+            "value": "number"
+          },
+          {
+            "name": "Textarea",
+            "value": "textarea"
+          },
+          {
+            "name": "Select",
+            "value": "select"
+          },
+          {
+            "name": "Radio",
+            "value": "radio"
+          },
+          {
+            "name": "Checkbox",
+            "value": "checkbox"
+          },
+          {
+            "name": "Date",
+            "value": "date"
+          },
+          {
+            "name": "OTP",
+            "value": "otp"
+          },
+          {
+            "name": "reCAPTCHA",
+            "value": "recaptcha"
+          },
+          {
+            "name": "Hidden",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "required",
+        "label": "Required",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "options",
+        "label": "Options (comma-separated, for select/radio/checkbox)",
+        "valueType": "string"
       }
     ]
   },
@@ -212,6 +766,470 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "map",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Route",
+            "value": "route"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "apiKey",
+        "label": "Google Maps API Key",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "center",
+        "label": "Center (latitude, longitude)",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "number",
+        "name": "zoom",
+        "label": "Zoom",
+        "valueType": "number",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "id": "map-marker",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "latitude",
+        "label": "Latitude",
+        "valueType": "number"
+      },
+      {
+        "component": "number",
+        "name": "longitude",
+        "label": "Longitude",
+        "valueType": "number"
+      },
+      {
+        "component": "richtext",
+        "name": "address",
+        "label": "Address",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "menu",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "menu-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pagination",
+    "fields": [
+      {
+        "component": "text",
+        "name": "target",
+        "label": "Target Selector",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "pageSize",
+        "label": "Page Size",
+        "valueType": "number",
+        "value": 9
+      }
+    ]
+  },
+  {
+    "id": "product-comparison",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "maxCompare",
+        "label": "Max products to compare",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "compare-product",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Name",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "price",
+        "label": "Price",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "specs",
+        "label": "Specs (one per line, \"Label: Value\")",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "progress-bar",
+    "fields": [
+      {
+        "component": "number",
+        "name": "current",
+        "label": "Current Step (1-based)",
+        "valueType": "number",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "progress-step",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "scroll-down",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "name": "placeholder",
+        "label": "Placeholder",
+        "valueType": "string",
+        "value": "Search..."
+      },
+      {
+        "component": "text",
+        "name": "endpoint",
+        "label": "Endpoint (query API URL)",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "categories",
+        "label": "Categories (comma-separated)",
+        "valueType": "string",
+        "value": "All,Cars,News,Downloads"
+      }
+    ]
+  },
+  {
+    "id": "sticky-cta",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "showAfter",
+        "label": "Show After (px scroll)",
+        "valueType": "number",
+        "value": 300
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Search Results",
+            "value": "search"
+          },
+          {
+            "name": "Pills",
+            "value": "pills"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "timeline",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Layout",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Vertical",
+            "value": "default"
+          },
+          {
+            "name": "Horizontal carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "timeline-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "date",
+        "label": "Date",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "variant-selector",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "variant-option",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Name",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "swatch",
+        "label": "Swatch Colour (hex)",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Preview Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "price",
+        "label": "Price",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "view-selector",
+    "fields": [
+      {
+        "component": "text",
+        "name": "target",
+        "label": "Target Selector",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "views",
+        "label": "Views",
+        "valueType": "string",
+        "value": [
+          "list",
+          "grid"
+        ],
+        "options": [
+          {
+            "name": "List",
+            "value": "list"
+          },
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Map",
+            "value": "map"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "virtual-showroom",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "showroom-frame",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Frame Image",
+        "valueType": "string",
+        "multi": false
       }
     ]
   }

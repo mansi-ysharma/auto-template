@@ -83,6 +83,67 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Accordion",
+          "id": "accordion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accordion",
+                  "model": "accordion",
+                  "filter": "accordion"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion Item",
+          "id": "accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Accordion Item",
+                  "model": "accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner with CTA",
+          "id": "banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner with CTA",
+                  "model": "banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Breadcrumb",
+          "id": "breadcrumb",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Breadcrumb",
+                  "model": "breadcrumb"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
@@ -113,6 +174,51 @@
           }
         },
         {
+          "title": "Carousel",
+          "id": "carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Carousel",
+                  "filter": "carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carousel Slide",
+          "id": "carousel-slide",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Slide",
+                  "model": "carousel-slide"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Chatbot",
+          "id": "chatbot",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Chatbot",
+                  "model": "chatbot"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
@@ -122,6 +228,156 @@
                 "template": {
                   "columns": "2",
                   "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accept Cookies flyout",
+          "id": "cookie-consent",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accept Cookies flyout",
+                  "model": "cookie-consent"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Dealer Locator",
+          "id": "dealer-locator",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Dealer Locator",
+                  "filter": "dealer-locator"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Dealer",
+          "id": "dealer",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Dealer",
+                  "model": "dealer"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Download",
+          "id": "download",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Download",
+                  "filter": "download"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Download Item",
+          "id": "download-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Download Item",
+                  "model": "download-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "EMI Calculator",
+          "id": "emi-calculator",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "EMI Calculator",
+                  "model": "emi-calculator"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Filter",
+          "id": "filter",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Filter",
+                  "filter": "filter"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Filter Group",
+          "id": "filter-group",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Filter Group",
+                  "model": "filter-group"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Form",
+          "id": "form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Form",
+                  "filter": "form"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Form Field",
+          "id": "form-field",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Form Field",
+                  "model": "form-field"
                 }
               }
             }
@@ -152,6 +408,322 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Map",
+          "id": "map",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Map",
+                  "filter": "map"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Map Marker",
+          "id": "map-marker",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Map Marker",
+                  "model": "map-marker"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Menu",
+          "id": "menu",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Menu",
+                  "filter": "menu"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Menu Item",
+          "id": "menu-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Menu Item",
+                  "model": "menu-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Pagination",
+          "id": "pagination",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Pagination",
+                  "model": "pagination"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Product Comparison",
+          "id": "product-comparison",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Product Comparison",
+                  "filter": "product-comparison"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Compare Product",
+          "id": "compare-product",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Compare Product",
+                  "model": "compare-product"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Progress Bar",
+          "id": "progress-bar",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Progress Bar",
+                  "filter": "progress-bar"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Progress Step",
+          "id": "progress-step",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Progress Step",
+                  "model": "progress-step"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Scroll Down",
+          "id": "scroll-down",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Scroll Down",
+                  "model": "scroll-down"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Search",
+          "id": "search",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Search",
+                  "model": "search"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Sticky CTA",
+          "id": "sticky-cta",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Sticky CTA",
+                  "model": "sticky-cta"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs",
+                  "model": "tabs",
+                  "filter": "tabs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tab",
+          "id": "tab",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tab",
+                  "model": "tab"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Timeline",
+          "id": "timeline",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Timeline",
+                  "filter": "timeline"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Timeline Item",
+          "id": "timeline-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Timeline Item",
+                  "model": "timeline-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Variant Selector",
+          "id": "variant-selector",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Variant Selector",
+                  "filter": "variant-selector"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Variant Option",
+          "id": "variant-option",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Variant Option",
+                  "model": "variant-option"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "View Selector",
+          "id": "view-selector",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "View Selector",
+                  "model": "view-selector"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Virtual Showroom",
+          "id": "virtual-showroom",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Virtual Showroom",
+                  "filter": "virtual-showroom"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Showroom Frame",
+          "id": "showroom-frame",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Showroom Frame",
+                  "model": "showroom-frame"
                 }
               }
             }

@@ -11,33 +11,62 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* ---- MG Motor brand palette ---- */
+
+  /* brand red */
+  --color-primary-red: #cb2532;
+  --color-red-hover: #a81c27;
+  --color-red-500: #d4212f;
+  --color-red-100: #eed7d9;
+  --color-red-50: #ffe1e4;
+
+  /* neutrals */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark: #0a0a0a;      /* dark section background */
+  --color-dark-mid: #111;
+  --color-ink: #131313;       /* primary text */
+  --color-ink-soft: #3b3b3b;  /* headings on light */
+  --color-muted: #6e6e6e;     /* secondary text */
+  --color-muted-2: #a4a4a4;
+  --color-surface-alt: #f5f5f5;
+  --color-border: #e1e1e1;
+
+  /* semantic */
+  --color-success: #2e7d32;
+  --color-error: #d32f2f;
+
+  /* boilerplate-compatible aliases (blocks reference these) */
+  --background-color: var(--color-white);
+  --light-color: var(--color-surface-alt);
+  --dark-color: var(--color-ink-soft);
+  --text-color: var(--color-ink);
+  --link-color: var(--color-primary-red);
+  --link-hover-color: var(--color-red-hover);
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: cabin, cabin-fallback, "gill sans", roboto, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 44px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 30px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* shape */
+  --button-radius: 11px;
+  --card-radius: 12px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 72px;
 }
 
 /* fallback fonts */
@@ -56,17 +85,17 @@
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    --body-font-size-m: 19px;
+    --body-font-size-s: 17px;
+    --body-font-size-xs: 15px;
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    /* heading sizes — larger display type on desktop, MG style */
+    --heading-font-size-xxl: 64px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 38px;
+    --heading-font-size-m: 30px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 20px;
   }
 }
 
@@ -178,14 +207,16 @@ button.button {
   justify-content: center;
   max-width: 100%;
   margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  padding: 0.85em 1.6em;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
   font-weight: 500;
   line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -199,18 +230,18 @@ button.button:disabled {
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border-color: var(--color-primary-red);
+  background-color: var(--color-primary-red);
+  color: var(--color-white);
 }
 
 a.button.primary:hover,
 a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  border-color: var(--color-red-hover);
+  background-color: var(--color-red-hover);
+  color: var(--color-white);
 }
 
 a.button.primary[aria-disabled="true"],
@@ -323,3 +354,83 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* dark section — MG's signature black panels */
+main .section.dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  margin: 0;
+  padding: 56px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: var(--color-white);
+}
+
+/* full-bleed section — content spans the viewport (heroes, banners) */
+main .section.full-width > div {
+  max-width: unset;
+  padding: 0;
+}
+
+/* eyebrow / uppercase display headings used across MG pages */
+main .section.center {
+  text-align: center;
+}
+
+main .section.center > div {
+  display: flow-root;
+}
+
+h2.uppercase,
+h1.uppercase,
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* spec / data tables (used inside accordions and content) */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-xs);
+}
+
+main table th,
+main table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+main table th {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+main table tr:nth-child(even) td {
+  background: var(--color-surface-alt);
+}
+
+/* simple inline breadcrumb (plain default content) */
+main .crumbs {
+  font-size: var(--body-font-size-xs);
+  color: var(--color-muted);
+}
+
+main .crumbs a {
+  color: var(--color-muted);
+}
+
+main .crumbs a:hover {
+  color: var(--color-primary-red);
+  text-decoration: none;
+}
+

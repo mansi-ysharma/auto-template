@@ -1,0 +1,136 @@
+.download .download-heading {
+  margin: 0 0 16px;
+  font-family: var(--heading-font-family);
+  color: var(--color-ink-soft);
+}
+
+.download .download-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 0 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.download .download-select-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--color-ink);
+}
+
+.download .download-select-all input {
+  accent-color: var(--color-primary-red);
+}
+
+.download .download-selected {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: var(--button-radius);
+  background: var(--color-primary-red);
+  color: var(--color-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.download .download-selected:hover {
+  background: var(--color-red-hover);
+}
+
+.download .download-selected:disabled {
+  background: var(--color-muted-2);
+  cursor: not-allowed;
+}
+
+.download .download-selected:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+.download .download-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.download .download-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.download .download-checkbox {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary-red);
+}
+
+.download .download-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.download .download-item-title {
+  display: block;
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.download .download-item-description {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.download .download-item-meta {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.download .download-item-action {
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary-red);
+  border-radius: var(--button-radius);
+  color: var(--color-primary-red);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.download .download-item-action:hover {
+  background: var(--color-primary-red);
+  color: var(--color-white);
+}
+
+.download .download-item-action:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+.download .download-item-action[aria-disabled='true'] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (width <= 599px) {
+  .download .download-item {
+    flex-wrap: wrap;
+  }
+
+  .download .download-item-action {
+    margin-left: auto;
+  }
+}

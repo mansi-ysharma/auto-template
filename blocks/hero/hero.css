@@ -5,23 +5,28 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 62vh;
+  padding: 48px 24px;
+  color: var(--color-white);
+  overflow: hidden;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(0 0 0 / 65%) 0%, rgb(0 0 0 / 25%) 50%, transparent 80%),
+    linear-gradient(0deg, rgb(0 0 0 / 45%) 0%, transparent 45%);
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
 }
 
 .hero img {
@@ -30,8 +35,61 @@
   height: 100%;
 }
 
+.hero > * {
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.hero p {
+  color: var(--color-white);
+}
+
+/* eyebrow: the first paragraph, before the h1 */
+.hero > p:first-of-type {
+  margin: 0 auto;
+  font-family: var(--heading-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--body-font-size-s);
+  opacity: 0.9;
+}
+
+.hero h1 {
+  margin: 6px auto 10px;
+  color: var(--color-white);
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1.02;
+}
+
+.hero .button-wrapper {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.hero .button.secondary {
+  border-color: var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+}
+
+.hero .button.secondary:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+/* Compact variant for content/landing pages */
+.hero.compact {
+  min-height: 40vh;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 64px 32px;
+    min-height: 68vh;
   }
 }

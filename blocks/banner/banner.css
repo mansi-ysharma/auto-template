@@ -1,0 +1,147 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 260px;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  background-color: var(--color-surface-alt);
+  color: var(--color-ink);
+}
+
+.banner .banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.banner .banner-bg picture,
+.banner .banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner .banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
+  color: inherit;
+}
+
+.banner .banner-content > * {
+  margin: 0 0 0.75rem;
+}
+
+.banner .banner-content a.button {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-primary-red);
+  color: var(--color-white);
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.banner .banner-content a.button:hover {
+  background-color: var(--color-red-hover);
+}
+
+.banner .banner-content a.button:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* dark variant */
+.banner.dark .banner-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 55%);
+}
+
+.banner.dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.banner.dark .banner-content {
+  color: var(--color-white);
+}
+
+/* flyout variant */
+.banner.flyout {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 900;
+  min-height: 0;
+  max-width: 380px;
+  margin-left: auto;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  transform: translateX(120%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.banner.flyout.banner-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner .banner-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgb(0 0 0 / 45%);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.banner .banner-close:hover {
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.banner .banner-close:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+@media (width >= 600px) {
+  .banner {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media (width >= 900px) {
+  .banner {
+    min-height: 360px;
+    padding: 4rem;
+  }
+}
+
+@media (width >= 1200px) {
+  .banner.flyout {
+    left: auto;
+  }
+}
